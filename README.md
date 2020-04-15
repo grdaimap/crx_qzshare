@@ -1,0 +1,2 @@
+# crx_qzshare
+一个同样很辣鸡的快速分享到QQ空间的chrome插件
