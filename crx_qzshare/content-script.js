@@ -11,12 +11,14 @@
 	];
 	dic.forEach(element => {
 		if (url.match(element[0])) {
-			if (element.length > 3)
+			if (element.length > 3) {
 				title = document.querySelector(element[3]).getAttribute(element[4]);
+				pic = document.querySelector(element[1]).getAttribute(element[2]);
+			}
 			else if (element.length == 2) {
-				if (element[1] == 0){
-					url=url.replace(/#\//, '');
-					url=url.replace(/=/,'%3d');
+				if (element[1] == 0) {
+					url = url.replace(/#\//, '');
+					url = url.replace(/=/, '%3d');
 				}
 				pic = document.getElementsByTagName("img")[element[1]].getAttribute("src");
 			}
@@ -28,6 +30,7 @@
 	});
 	var e = document.createElement("a");
 	e.id = "qqzoneshareurl";
+	e.style.display = "none";
 	e.innerHTML = "分享到QQ空间";
 	e.href = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "&pics=" + pic;
 	document.body.append(e);

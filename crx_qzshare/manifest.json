@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "QQ空间分享助手",
-	"version": "1.0",
+	"version": "1.1",
 	"description": "用来一键分享到QQ空间",
 	"author": "grdaimap",
 	"icons":
