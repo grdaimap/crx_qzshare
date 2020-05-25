@@ -7,7 +7,6 @@
 		['www.bilibili.com', '[itemprop="image"]', "content"],
 		["mp.weixin.qq.com", 'meta[property="og:image"]', "content", 'meta[property="og:title"]', "content"],
 		["zhihu.com", 1],
-		["music.163.com", 0]
 	];
 	dic.forEach(element => {
 		if (url.match(element[0])) {
@@ -16,15 +15,14 @@
 				pic = document.querySelector(element[1]).getAttribute(element[2]);
 			}
 			else if (element.length == 2) {
-				if (element[1] == 0) {
-					url = url.replace(/#\//, '');
-					url = url.replace(/=/, '%3d');
-				}
 				pic = document.getElementsByTagName("img")[element[1]].getAttribute("src");
 			}
 			else
 				pic = document.querySelector(element[1]).getAttribute(element[2]);
 		}
+		url = url.replace(/#\//, '');
+		url = url.replace(/=/g, '%3d');
+		url = url.replace(/&/g, '%26');
 		if (!pic.match("http"))
 			pic = "http://" + pic;
 	});
