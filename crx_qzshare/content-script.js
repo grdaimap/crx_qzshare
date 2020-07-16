@@ -16,6 +16,7 @@
 			}
 			else if (element.length == 2) {
 				pic = document.getElementsByTagName("img")[element[1]].getAttribute("src");
+				document.getElementById("Popover17-toggle").parentNode.removeChild(document.getElementById("Popover17-toggle"));
 			}
 			else
 				pic = document.querySelector(element[1]).getAttribute(element[2]);
