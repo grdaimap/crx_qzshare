@@ -17,7 +17,8 @@
 			else if (element.length == 2) {
 				pic = document.getElementsByTagName("img")[element[1]].getAttribute("src");
 				try {
-					document.getElementById("Popover17-toggle").parentNode.removeChild(document.getElementById("Popover17-toggle"));
+					document.getElementsByClassName("Button AppHeader-messages css-79elbk Button--plain")[0].parentNode.removeChild(document.getElementsByClassName("Button AppHeader-messages css-79elbk Button--plain")[0]);
+					document.getElementById("Popover29-toggle").parentNode.removeChild(document.getElementById("Popover29-toggle"));
 				} catch (error) {
 					console.log('非知乎回答页');
 				}
